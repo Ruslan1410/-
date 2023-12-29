@@ -5,3 +5,12 @@
 string [] array  = new string [5]{
     "array","show","room","five","hello"
 };
+
+string [] randomArray = new string [3];
+Random rd = new Random(); //Объявляем генератор. 
+// string[] i = new string[3]; //Создаем массив. 
+for (int j = 0; j < array.Length; j++) 
+{ 
+randomArray[j] = rd.Next(string[] array); 
+}
+Console.WriteLine(randomArray);
