@@ -2,15 +2,28 @@
 // длина которых меньше, либо равна 3 символам. Первоначальный массив можно ввести с клавиатуры, либо задать на старте выполнения алгоритма.
 // При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами.
 
-string [] array  = new string [5]{
-    "array","show","room","five","hello"
-};
-
-string [] randomArray = new string [3];
-Random rd = new Random(); //Объявляем генератор. 
-// string[] i = new string[3]; //Создаем массив. 
-for (int j = 0; j < array.Length; j++) 
-{ 
-randomArray[j] = rd.Next(string[] array); 
-}
-Console.WriteLine(randomArray);
+class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] array = new[] {"boo", "test", "123", "yell", "eat", ":-)"};
+            
+            string[] endArray = new string[array.Length];
+ 
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i].Length <= 3)
+                {
+                    endArray[i] = array[i];
+                }
+            }
+ 
+            foreach (var S in endArray)
+            {
+                if (S != null)
+                {
+                    Console.WriteLine(S);
+                }
+            }
+        }
+    }
